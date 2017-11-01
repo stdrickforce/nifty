@@ -8,6 +8,7 @@ It is also the implementation used by [Swift](https://github.com/facebook/swift)
 
 To create a basic Thrift server using Nifty, use the [Thrift 0.9.0](https://dist.apache.org/repos/dist/release/thrift/0.9.0/thrift-0.9.0.tar.gz) code generator to generate Java stub code, write a Handler for your service interface, and pass it to Nifty like this:
 
+```Java
     public void startServer() {
         // Create the handler
         MyService.Iface serviceInterface = new MyServiceHandler();
@@ -44,6 +45,7 @@ To create a basic Thrift server using Nifty, use the [Thrift 0.9.0](https://dist
             }
         });
     }
+```
 
 Or the same thing using guice:
 
